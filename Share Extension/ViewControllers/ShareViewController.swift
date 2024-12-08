@@ -106,7 +106,6 @@ class ShareViewController: UIViewController {
                         { (data, error) in
                                print("URL : \(data)")
                             self.webURL = (data as! NSURL).absoluteString!
-                            print("WEBBB", self.webURL)
                             ShareDataManager().getItemDataDataManager((data as! NSURL).absoluteString!, self)
                         }
                    }

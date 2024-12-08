@@ -388,7 +388,7 @@ extension UploadItemViewController {
         var isItemNameValid: Bool = false
         var isItemPriceValid: Bool = false
         
-        let isImageSelected = self.selectedImage != nil
+        let isImageSelected = (self.selectedImage != nil) || (self.wishListData.item_img_url != nil)
         
         if let itemName = self.wishListData.item_name {
             isItemNameValid = !(itemName.isEmpty)
