@@ -191,10 +191,10 @@ class ItemDetailTableViewCell: UITableViewCell {
     func setUpData(_ data: WishListModel) {
         itemImage.layer.cornerRadius = itemImage.bounds.width / 10.7
         
-        if let url = data.item_img_url {
-            let processor = TintImageProcessor(tint: .black_5)
-            self.itemImage.kf.setImage(with: URL(string: url), placeholder: UIImage(), options: [.processor(processor), .transition(.fade(0.5))])
-        }
+        // Image
+        let processor = TintImageProcessor(tint: .black_5)
+        self.itemImage.kf.setImage(with: URL(string: data.item_img_url ?? ""), placeholder: Image.appLogo, options: [.processor(processor), .transition(.fade(0.5))])
+        
         if let notificationType = data.item_notification_type {
             if let notificationDate = data.item_notification_date {
                 self.restockLabel.isHidden = false

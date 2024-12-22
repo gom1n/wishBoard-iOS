@@ -140,7 +140,7 @@ class ShareViewController: UIViewController {
     func isValidContent() -> Bool {
         if self.itemName != "" && self.itemPrice != ""
             && self.itemName != nil && self.itemPrice != nil
-            && self.itemImg != nil
+//            && self.itemImg != nil
             {return true}
         else {return false}
     }
@@ -169,14 +169,20 @@ class ShareViewController: UIViewController {
         }
         
         // 이미지 uri를 UIImage로 변환
-        guard let itemImg = self.itemImg else {return}
-        guard let url = URL(string: itemImg) else {return}
-        var selectedImage : UIImage?
-        guard let data = try? Data(contentsOf: url) else {return}
-        DispatchQueue.main.async { [self] in
-            selectedImage = UIImage(data: data)
-            ShareDataManager().uploadItemDataManager(selectedFolderIdx, selectedImage!, itemName!, itemPrice!, webURL!, "", notificationType, notificationDate, self)
+        var selectedImage : UIImage? = nil
+        if let itemImg = self.itemImg {
+            if let url = URL(string: itemImg), let data = try? Data(contentsOf: url) {
+                selectedImage = UIImage(data: data)
+            }
         }
+//        guard let itemImg = self.itemImg else {return}
+//        guard let url = URL(string: itemImg) else {return}
+//        var selectedImage : UIImage?
+//        guard let data = try? Data(contentsOf: url) else {return}
+//        DispatchQueue.main.async { [self] in
+//            selectedImage = UIImage(data: data)
+            ShareDataManager().uploadItemDataManager(selectedFolderIdx, selectedImage, itemName!, itemPrice!, webURL!, "", notificationType, notificationDate, self)
+//        }
     }
     // 알람 설정 BottomSheet
     @objc func showNotificationBottomSheet() {
@@ -296,6 +302,9 @@ extension ShareViewController {
         SnackBar.shared.showSnackBar(self, message: .failShoppingLink)
         
         shareView.completeButton.inactivateButton()
+        
+        // 아이템 파싱에 실패해도 폴더리스트 조회
+        FolderDataManager().getFolderListDataManager(self)
     }
     // MARK: 아이템 간편 등록
     func uploadItemAPISuccess(_ result: APIModel<ResultModel>) {
