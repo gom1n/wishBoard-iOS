@@ -77,8 +77,8 @@ class ItemDetailViewController: UIViewController, Observer {
         UIDevice.vibrate()
         let model = PopUpModel(title: "아이템 삭제",
                                message: "정말 아이템을 삭제하시겠어요?\n삭제된 아이템은 다시 복구할 수 없어요!",
-                               greenBtnText: "취소",
-                               blackBtnText: "삭제")
+                               greenBtnText: "삭제",
+                               blackBtnText: "취소")
         let dialog = PopUpViewController(model, .delete)
         self.present(dialog, animated: false, completion: nil)
         

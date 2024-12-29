@@ -125,7 +125,11 @@ final class SnackBar {
             self.closeSnackBar()
             
             #else
-            guard let originView = self.originView else {return}
+            // 링크 파싱 실패 스낵바일 땐 그냥 닫기만
+            guard let originView = self.originView, self.message != .failShoppingLink else {
+                self.closeSnackBar()
+                return
+            }
             originView.extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
             self.closeSnackBar()
             

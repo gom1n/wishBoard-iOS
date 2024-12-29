@@ -57,7 +57,7 @@ class ShareDataManager {
     }
     // MARK: - 아이템 간편 등록
     func uploadItemDataManager(_ folderId: Int?,
-                               _ photo: UIImage,
+                               _ photo: UIImage?,
                                _ itemName: String,
                                _ itemPrice: String,
                                _ itemURL: String,
@@ -98,7 +98,7 @@ class ShareDataManager {
         }
         
         AF.upload(multipartFormData: { (multipart) in
-            if let imageData = photo.resizeImageIfNeeded().jpegData(compressionQuality: 1.0) {
+            if let imageData = photo?.resizeImageIfNeeded().jpegData(compressionQuality: 1.0) {
                 multipart.append(imageData, withName: "item_img", fileName: "photo.jpg", mimeType: "image/jpeg")
                 //이미지 데이터를 POST할 데이터에 덧붙임
             }

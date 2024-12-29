@@ -82,10 +82,10 @@ class WishListCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpData(_ data: WishListModel) {
-        if let image = data.item_img_url {
-            let processor = TintImageProcessor(tint: .black_5)
-            self.itemImage.kf.setImage(with: URL(string: image), placeholder: UIImage(), options: [.processor(processor), .transition(.fade(0.5))])
-        }
+        // Image
+        let processor = TintImageProcessor(tint: .black_5)
+        self.itemImage.kf.setImage(with: URL(string: data.item_img_url ?? ""), placeholder: Image.appLogo, options: [.processor(processor), .transition(.fade(0.5))])
+        
         if let name = data.item_name {self.itemName.text = name}
         if let price = data.item_price {self.itemPrice.text = FormatManager().strToPrice(numStr: price)}
         if let isCart = data.cart_state {

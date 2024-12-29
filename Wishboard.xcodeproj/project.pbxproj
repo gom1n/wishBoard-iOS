@@ -223,6 +223,8 @@
 		23E0ACC528E79F09008C35C2 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0ACC428E79F09008C35C2 /* KeyboardViewController.swift */; };
 		23E0ACC728E7A767008C35C2 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0ACC628E7A767008C35C2 /* UILabel.swift */; };
 		23E0ACC828E7B563008C35C2 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0ACC428E79F09008C35C2 /* KeyboardViewController.swift */; };
+		23E17DEC2CA4280A005EAE18 /* VersionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E17DEB2CA4280A005EAE18 /* VersionDataManager.swift */; };
+		23E17DEF2CA42871005EAE18 /* VersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E17DEE2CA42871005EAE18 /* VersionModel.swift */; };
 		23E378DE28D2EBFA00C52F2D /* PopUpDeleteUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E378DD28D2EBFA00C52F2D /* PopUpDeleteUserViewController.swift */; };
 		23E378E128D2F07500C52F2D /* UploadItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E378E028D2F07500C52F2D /* UploadItemView.swift */; };
 		23E378E328D2F16900C52F2D /* UploadItemPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E378E228D2F16900C52F2D /* UploadItemPhotoTableViewCell.swift */; };
@@ -461,6 +463,8 @@
 		23DC04EA28C591F400ABB0CF /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		23E0ACC428E79F09008C35C2 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		23E0ACC628E7A767008C35C2 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		23E17DEB2CA4280A005EAE18 /* VersionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionDataManager.swift; sourceTree = "<group>"; };
+		23E17DEE2CA42871005EAE18 /* VersionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionModel.swift; sourceTree = "<group>"; };
 		23E378DD28D2EBFA00C52F2D /* PopUpDeleteUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDeleteUserViewController.swift; sourceTree = "<group>"; };
 		23E378E028D2F07500C52F2D /* UploadItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadItemView.swift; sourceTree = "<group>"; };
 		23E378E228D2F16900C52F2D /* UploadItemPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadItemPhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -784,6 +788,7 @@
 		232174E028E1BED9008C155D /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				23E17DED2CA42867005EAE18 /* VersionModel */,
 				235D550428EBD2B900314D62 /* ItemModel */,
 				23279A0F28E4988F00CAD1CA /* CartModel */,
 				2339D4FA28E3CD2A00E636FD /* FolderModel */,
@@ -1137,6 +1142,7 @@
 			isa = PBXGroup;
 			children = (
 				233C34B829C75AAB005DFA39 /* Foundation */,
+				23E17DEA2CA427F9005EAE18 /* Version */,
 				23D0824C28E4DC2A00CE541E /* Item */,
 				230A3F5728E4B5BE00966682 /* Notification */,
 				23279A0C28E497FD00CAD1CA /* Cart */,
@@ -1461,6 +1467,22 @@
 				2307A23D28DE545F00E00005 /* Authentication */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		23E17DEA2CA427F9005EAE18 /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				23E17DEB2CA4280A005EAE18 /* VersionDataManager.swift */,
+			);
+			path = Version;
+			sourceTree = "<group>";
+		};
+		23E17DED2CA42867005EAE18 /* VersionModel */ = {
+			isa = PBXGroup;
+			children = (
+				23E17DEE2CA42871005EAE18 /* VersionModel.swift */,
+			);
+			path = VersionModel;
 			sourceTree = "<group>";
 		};
 		23E378DF28D2F05D00C52F2D /* UploadItem */ = {
@@ -1973,6 +1995,7 @@
 				23ED291C2A88FE4E00B26885 /* AuthIntercepter.swift in Sources */,
 				2360095E28DA1829001FB107 /* FolderDetailViewController.swift in Sources */,
 				2351859929A6F40B0004FCB4 /* Image.swift in Sources */,
+				23E17DEF2CA42871005EAE18 /* VersionModel.swift in Sources */,
 				23F07F4428E7D5930012D77D /* TitleCenterViewController.swift in Sources */,
 				23C2378928C9CF0400CE3200 /* FolderListModel.swift in Sources */,
 				237478A428D20DB600CF941A /* FolderListTableViewCell.swift in Sources */,
@@ -2037,6 +2060,7 @@
 				2369A9CA2AA740CB00781A81 /* BaseViewModel.swift in Sources */,
 				234F838828C97BF900C4EB41 /* WishListModel.swift in Sources */,
 				23C8A1C728CA0AC9003ABFE9 /* ItemDetailTableViewCell.swift in Sources */,
+				23E17DEC2CA4280A005EAE18 /* VersionDataManager.swift in Sources */,
 				23D5518B28C6B45C00D81B5F /* String.swift in Sources */,
 				23E378E128D2F07500C52F2D /* UploadItemView.swift in Sources */,
 				2360FF5E28DCC64100E481A6 /* ScreenManager.swift in Sources */,
@@ -2139,7 +2163,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Share Extension/Share Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202407142047;
+				CURRENT_PROJECT_VERSION = 202412221;
 				DEVELOPMENT_TEAM = B974XY47GZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Share Extension/Info.plist";
@@ -2152,7 +2176,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "gomin.Wishboard.Share-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2169,7 +2193,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Share Extension/Share Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202407142047;
+				CURRENT_PROJECT_VERSION = 202412221;
 				DEVELOPMENT_TEAM = B974XY47GZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Share Extension/Info.plist";
@@ -2182,7 +2206,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "gomin.Wishboard.Share-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2319,7 +2343,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Wishboard/Wishboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202407142047;
+				CURRENT_PROJECT_VERSION = 202412221;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = B974XY47GZ;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2336,7 +2360,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = gomin.Wishboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG WISHBOARD_APP";
@@ -2356,7 +2380,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Wishboard/Wishboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202407142047;
+				CURRENT_PROJECT_VERSION = 202412221;
 				DEVELOPMENT_TEAM = B974XY47GZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wishboard/Info.plist;
@@ -2372,7 +2396,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = gomin.Wishboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "REL WISHBOARD_APP";
